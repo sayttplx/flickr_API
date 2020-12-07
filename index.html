@@ -6,14 +6,23 @@
     <link rel="stylesheet"href="./style/style.css">
     <title>flickr</title>
 </head>
-<body>
-    
+<body>  
+
+    <label class="size-option">Choose size:
+        <select class="size" name="size">
+          <option value="">Select size…</option>
+          <option value="_s">small</option>
+          <option value="_q">medium</option>
+          <option value="_m">large</option>
+        </select>
+      </label>
 
 <input type="text" id="search">
 <button id="button">Search Button</button>
 
-
+<ul id="render"></ul>
 
 <script src="./js/script.js"></script>
+
 </body>
 </html>
