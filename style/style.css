@@ -1,27 +1,34 @@
-body {
+:root {
     margin: 0 auto;
     max-width: 760px;
     text-align: center;
+    box-sizing: border-box
+}
+body {
+    margin: auto 0;
+    height: 100%;
 }
 
-ul {
+.render-list {
     display: flex;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     list-style-type: none;
     padding-inline-start: 0px;
-    gap: 1rem;
+    grid-gap: 1rem;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
-.test > img {
+.photo-style > img {
     width: 100%;
     display: block;
-  }
-
-label {
-    display: none;
 }
-  
 
-
+.search-bar {
+    display: flex;
+    flex-direction: column;
+    width: 10rem;
+    margin: 0 auto;
+}
