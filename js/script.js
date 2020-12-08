@@ -3,7 +3,8 @@ let button = document.getElementById("button");
 let smallSize = document.getElementById('small-size');
 let mediumSize = document.getElementById('medium-size');
 let largeSize = document.getElementById('large-size');
-let size = '_q';
+let resetRender = document.getElementById('render');
+let size = '_b';
 
 
 let getData = async (query) => {
@@ -11,7 +12,7 @@ let getData = async (query) => {
     const KEY = "19d3e6e0acfe9c438f368e2c2bab1c5d";
     const METHOD = "flickr.photos.search";
     const FORMAT = "json&nojsoncallback=1";
-    const PAGES_12 = "per_page=64";
+    const PAGES_12 = "per_page=32";
     // const PAGES_24 = "per_page=24";
     // const PAGES_36 = "per_page=36";
 
@@ -23,7 +24,9 @@ let getData = async (query) => {
 };
 
 button.addEventListener("click", function () {
+    resetRender.innerHTML = ''
     getData(search.value);
+    
 });
 
 function getImage(data) {
@@ -46,14 +49,20 @@ function getImage(data) {
 smallSize.addEventListener('click', () => {
     size = '_s'
     console.log(size)
+    resetRender.innerHTML = '';
+    getData(search.value)
 });
 
 mediumSize.addEventListener('click', () => {
     size = '_q'
     console.log(size)
+    resetRender.innerHTML = '';
+    getData(search.value)
 });
 
 largeSize.addEventListener('click', () => {
     size = '_b'
     console.log(size)
+    resetRender.innerHTML = ''
+    getData(search.value)
 });
