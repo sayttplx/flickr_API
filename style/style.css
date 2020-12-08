@@ -1,9 +1,9 @@
 :root {
     margin: 0 auto;
-    max-width: 600px;
+    padding: 0;
     text-align: center;
     box-sizing: border-box;
-    background-color: rgb(246, 220, 245);
+    background-color: rgb(93, 87, 91);
 }
 
 body {
@@ -29,8 +29,8 @@ header {
 
 .render-list img {
     border-radius: 5px;
-    display: block;
-    width: 100%;
+    width: 230px;
+    height: 230px;
 }
 
 .render-list img:hover {
@@ -40,6 +40,7 @@ header {
 .search-bar {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 10rem;
     margin: 0 auto;
 }
@@ -48,6 +49,16 @@ label {
     display: none;
 }
 
+.input_field {
+    margin: 1rem;
+    height: 1.3rem;
+    border-radius: 4px;
+    border: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #F3F3FE;
+}
 
-
-
+.search-bar {
+    background-size: 5px;
+}

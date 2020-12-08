@@ -26,7 +26,6 @@ let getData = async (query) => {
 button.addEventListener("click", function () {
     resetRender.innerHTML = ''
     getData(search.value);
-    
 });
 
 function getImage(data) {
@@ -35,7 +34,7 @@ function getImage(data) {
     data.photos.photo.forEach((element) => {
         let imageItem = document.createElement("li");
         imageItem.classList.add('photo-style')
-        imageItem.innerHTML = `<img src="https://farm${element.farm}.staticflickr.com/${element.server}/${element.id}_${element.secret}${size}.jpg"/>`;
+        imageItem.innerHTML = `<img src="https://farm${element.farm}.staticflickr.com/${element.server}/${element.id}_${element.secret}.jpg"/>`;
         render.appendChild(imageItem);
     });
 };
@@ -46,23 +45,23 @@ function getImage(data) {
 //     console.log(size)
 // });
 
-smallSize.addEventListener('click', () => {
-    size = '_s'
-    console.log(size)
-    resetRender.innerHTML = '';
-    getData(search.value)
-});
+// smallSize.addEventListener('click', () => {
+//     size = '_s'
+//     console.log(size)
+//     resetRender.innerHTML = '';
+//     getData(search.value)
+// });
 
-mediumSize.addEventListener('click', () => {
-    size = '_q'
-    console.log(size)
-    resetRender.innerHTML = '';
-    getData(search.value)
-});
+// mediumSize.addEventListener('click', () => {
+//     size = '_q'
+//     console.log(size)
+//     resetRender.innerHTML = '';
+//     getData(search.value)
+// });
 
-largeSize.addEventListener('click', () => {
-    size = '_b'
-    console.log(size)
-    resetRender.innerHTML = ''
-    getData(search.value)
-});
+// largeSize.addEventListener('click', () => {
+//     size = '_b'
+//     console.log(size)
+//     resetRender.innerHTML = ''
+//     getData(search.value)
+// });
