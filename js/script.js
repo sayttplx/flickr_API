@@ -49,10 +49,6 @@ searchButton.addEventListener('click', (e) => {
     }
 });
 
-// document.getElementById('test').addEventListener('click', () => {
-// console.log(getNumberOfImages())
-// });
-
 // HERE WE RENDER OUR ARREY WITH IMG'S AND CALL FOR OUR LIGHTBOX FUNCTION
 function drawList() {
     resetRender.innerHTML = '';
@@ -63,12 +59,11 @@ function drawList() {
     lightboxFunction();
 }
 
-
 // WE MAKE A LOOP AND USE THE ARREY METHOD PUSH TO GET OUR DATA INSIDE THE NEW ARREY.
 function getImage(data) {
     data.photos.photo.forEach((element) => {
         let imageItem = renderList;
-        imageItem.innerHTML = `<img id='light' class='border-color' src="https://farm${element.farm}.staticflickr.com/${element.server}/${element.id}_${element.secret}.jpg"/>`;
+        imageItem.innerHTML = `<img id='light' src="https://farm${element.farm}.staticflickr.com/${element.server}/${element.id}_${element.secret}.jpg"/>`;
         list.push(imageItem.innerHTML);
     });
 };
@@ -103,7 +98,6 @@ function lightboxFunction() {
         lightbox.classList.remove('active');
     })
 }
-
 
 function makeList() {
     numberOfPages = getNumberOfPages();
@@ -155,7 +149,6 @@ function load() {
     loadList();
 }
 
-
 // SELECTINDEX FOR THE DROPDOWN MENU. WITH IF STATEMENT TO GET VALUE OF HOW MANY IMAGES WE WANNA GET
 function getNumberOfImages() {
     let select = document.getElementById('number-images');
@@ -172,6 +165,7 @@ function getNumberOfImages() {
     }
 };
 
+// EMPTY THE RENDER
 function resetRend() {
     resetRender.innerHTML = '';
 }
@@ -190,6 +184,7 @@ function borderColorBlack() {
 };
 
 
+// CHANGES THE BORDER COLOR EVENLISTNER
 black.addEventListener('click', function () {
     borderColorBlack()
 });
@@ -200,4 +195,8 @@ coral.addEventListener('click', function () {
 
 white.addEventListener('click', function () {
     borderColorWhite()
+    console.log(pageList)
+    console.log(pageList[1])
+    console.log(pageList[2])
+    console.log(pageList[3])
 });

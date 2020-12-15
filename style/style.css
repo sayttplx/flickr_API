@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 :root {
     --main-bg-color: rgb(104, 101, 101);
     --header-bg-color:rgb(93, 93, 93);
     --footer-bg-color:rgb(104, 101, 101);
+    --theme-font: 'Press Start 2P', cursive;
 }
 
 body {
@@ -9,10 +12,15 @@ body {
     padding: 0;
     text-align: center;
     background-color: var(--main-bg-color);
+    font-family: var(--theme-font);;
 }
 
 header {
     padding: .8rem;
+}
+
+h1 {
+    font-size: 4rem;
 }
 
 .hero {
@@ -32,6 +40,9 @@ header {
     border: 0;
     padding: 0;
     outline: none;
+    font-family: var(--theme-font);
+    font-size: 10px;
+    
 }
 
 form {
@@ -112,6 +123,10 @@ svg:hover {
     justify-content: center;
     flex-direction: row;
     margin: .3rem;
+}
+
+#next, #previous, #number-images {
+    font-family: var(--theme-font);
 }
 
 #lightbox {
