@@ -13,6 +13,7 @@ const white = document.getElementById('white');
 // SOME GLOBAL VALUES AND ARREYS
 let list = new Array();
 let pageList = new Array();
+let borderChoosen = 'borderBlack'
 let currentPage = 1;
 let numberOfPages = 1;
 const numberPerPage = 12;
@@ -84,6 +85,7 @@ function lightboxFunction() {
         image.addEventListener('click', function () {
             lightbox.classList.add('active');
             const img = document.createElement('img');
+            img.classList.add(borderChoosen)
             img.src = image.src;
             while (lightbox.firstChild) {
                 lightbox.removeChild(lightbox.firstChild);
@@ -91,9 +93,9 @@ function lightboxFunction() {
             lightbox.appendChild(img);
         })
     })
-// HERE WE USE AN EVENTLISTNER WITH IF STATEMENT THAT CHECKS THAT THE TWO ARE NOT THE SAME 
+    // HERE WE USE AN EVENTLISTNER WITH IF STATEMENT THAT CHECKS THAT THE TWO ARE NOT THE SAME 
     lightbox.addEventListener('click', (event) => {
-        
+
         if (event.target !== event.currentTarget) return
         lightbox.classList.remove('active');
     })
@@ -184,19 +186,18 @@ function borderColorBlack() {
 };
 
 
-// CHANGES THE BORDER COLOR EVENLISTNER
+// CHANGES THE BORDER COLOR EVENTLISTNER
 black.addEventListener('click', function () {
     borderColorBlack()
+    borderChoosen = 'borderBlack'
 });
 
 coral.addEventListener('click', function () {
     borderColorCoral()
+    borderChoosen = 'borderCoral'
 });
 
 white.addEventListener('click', function () {
     borderColorWhite()
-    console.log(pageList)
-    console.log(pageList[1])
-    console.log(pageList[2])
-    console.log(pageList[3])
+    borderChoosen = 'borderWhite'
 });
