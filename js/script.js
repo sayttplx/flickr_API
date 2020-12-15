@@ -58,7 +58,7 @@ function drawList() {
     }
 
     lightboxFunction();
-}
+};
 
 // WE MAKE A LOOP AND USE THE ARREY METHOD PUSH TO GET OUR DATA INSIDE THE NEW ARREY.
 function getImage(data) {
@@ -85,7 +85,7 @@ function lightboxFunction() {
         image.addEventListener('click', function () {
             lightbox.classList.add('active');
             const img = document.createElement('img');
-            img.classList.add(borderChoosen)
+            img.classList.add(borderChoosen);
             img.src = image.src;
             while (lightbox.firstChild) {
                 lightbox.removeChild(lightbox.firstChild);
@@ -96,10 +96,10 @@ function lightboxFunction() {
     // HERE WE USE AN EVENTLISTNER WITH IF STATEMENT THAT CHECKS THAT THE TWO ARE NOT THE SAME 
     lightbox.addEventListener('click', (event) => {
 
-        if (event.target !== event.currentTarget) return
+        if (event.target !== event.currentTarget) return;
         lightbox.classList.remove('active');
     })
-}
+};
 
 function makeList() {
     numberOfPages = getNumberOfPages();
@@ -188,16 +188,16 @@ function borderColorBlack() {
 
 // CHANGES THE BORDER COLOR EVENTLISTNER
 black.addEventListener('click', function () {
-    borderColorBlack()
-    borderChoosen = 'borderBlack'
+    borderColorBlack();
+    borderChoosen = 'borderBlack';
 });
 
 coral.addEventListener('click', function () {
-    borderColorCoral()
-    borderChoosen = 'borderCoral'
+    borderColorCoral();
+    borderChoosen = 'borderCoral';
 });
 
 white.addEventListener('click', function () {
-    borderColorWhite()
-    borderChoosen = 'borderWhite'
+    borderColorWhite();
+    borderChoosen = 'borderWhite';
 });

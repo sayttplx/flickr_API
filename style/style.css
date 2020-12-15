@@ -23,6 +23,10 @@ h1 {
     font-size: 4rem;
 }
 
+form {
+    margin-bottom: 1rem;
+}
+
 .hero {
     background-color: var(--header-bg-color);
 }
@@ -42,10 +46,6 @@ h1 {
     outline: none;
     font-family: var(--theme-font);
     font-size: 10px;
-}
-
-form {
-    margin-bottom: 1rem;
 }
 
 .btn {
@@ -162,7 +162,5 @@ svg:hover {
     border: 4px solid rgb(255, 255, 255);
 }
 
-
-
-
+/* THIS IS SOME RANDOM STUFF I FOUND TO GET AROUND THE UGLY USER AGENT STYLESHEET FOR INPUT-FIELD.. IT HAD A TERRIBLE LIGHT-BLUE COLOR THAT DIDNT WANT TO GO AWAY */
 input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active { transition: all 5000s ease-in-out 0s; transition-property: background-color, color; }
